@@ -59,7 +59,7 @@ const ciudades = [
 ];
 
 export default function App() {
-  const [mode, setMode] = useState<'selector' | 'form'>('selector');
+  const [mode, setMode] = useState<'selector' | 'form' | 'consultar'>('selector');
   const [step, setStep] = useState<Step>(1);
   const [anonima, setAnonima] = useState(false);
   const [submitted, setSubmitted] = useState(false);
@@ -178,8 +178,10 @@ export default function App() {
       <main className="flex-1 max-w-[1280px] mx-auto px-4 md:px-6 w-full py-10">
         {submitted ? (
           <SuccessView radicado={radicado} form={form} onReset={reset} />
+        ) : mode === 'consultar' ? (
+          <ConsultarView onBack={() => setMode('selector')} />
         ) : mode === 'selector' ? (
-          <SelectorView onSelect={startForm} />
+          <SelectorView onSelect={startForm} onConsultar={() => setMode('consultar')} />
         ) : (
           <FormView
             step={step}
@@ -203,7 +205,7 @@ export default function App() {
 }
 
 /* ── SELECTOR ── */
-function SelectorView({ onSelect }: { onSelect: (anon: boolean) => void }) {
+function SelectorView({ onSelect, onConsultar }: { onSelect: (anon: boolean) => void; onConsultar: () => void }) {
   return (
     <div>
       <div className="p-4 mb-8 flex items-start gap-3 text-sm" style={{ background: '#EEF2FF', borderLeft: `4px solid ${BLUE}` }}>
@@ -291,17 +293,15 @@ function SelectorView({ onSelect }: { onSelect: (anon: boolean) => void }) {
                 ¿Ya radicaste una solicitud? Consulta el estado y el historial de tus PQRS ingresando tu número de radicado.
               </p>
             </div>
-            <a
-              href="https://lair-tech-29288756.figma.site"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-8 py-3 font-semibold transition-all rounded-full w-full max-w-xs cursor-pointer text-center inline-block"
-              style={{ border: `2px solid ${BLUE}`, color: BLUE, fontFamily: "'Source Sans Pro', sans-serif" }}
+            <button
+              onClick={onConsultar}
+              className="px-8 py-3 font-semibold transition-all rounded-full w-full max-w-xs cursor-pointer text-center"
+              style={{ border: `2px solid ${BLUE}`, color: BLUE, background: 'transparent', fontFamily: "'Source Sans Pro', sans-serif" }}
               onMouseEnter={e => { e.currentTarget.style.background = '#0000F7'; e.currentTarget.style.borderColor = '#0000F7'; e.currentTarget.style.color = '#fff'; }}
               onMouseLeave={e => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.borderColor = BLUE; e.currentTarget.style.color = BLUE; }}
             >
               Consultar estado
-            </a>
+            </button>
           </div>
         </div>
       </div>
@@ -635,6 +635,108 @@ function SuccessView({ radicado, form, onReset }: { radicado: string; form: Form
         <button className="px-8 py-3 rounded-xl font-semibold border-2" style={{ borderColor: BLUE, color: BLUE }}>
           Descargar comprobante
         </button>
+      </div>
+    </div>
+  );
+}
+
+/* ── CONSULTAR VIEW ── */
+function ConsultarView({ onBack }: { onBack: () => void }) {
+  const [radicado, setRadicado] = useState('');
+  const [resultado, setResultado] = useState<null | 'found' | 'not_found'>(null);
+
+  const handleConsultar = () => {
+    if (!radicado.trim()) return;
+    setResultado(radicado.toUpperCase().startsWith('AXA') ? 'found' : 'not_found');
+  };
+
+  return (
+    <div className="max-w-[1280px] mx-auto px-4 md:px-6 w-full py-10">
+      {/* Header con logo */}
+      <div className="flex items-center gap-3 mb-10">
+        <img
+          src="https://image.marketing.axacolpatria.co/lib/fe2911747364047e721277/m/1/414c8f47-08cb-4aca-80c0-c4ef42d1e91d.jpg"
+          alt="AXA COLPATRIA"
+          className="h-8"
+        />
+      </div>
+
+      <div className="max-w-md mx-auto">
+        <h1 className="text-3xl font-bold mb-2 text-center" style={{ fontFamily: "'Publico Headline Web', serif", color: '#343c3d' }}>
+          Consulta el estado de tu PQRS
+        </h1>
+        <p className="text-center mb-8 text-sm" style={{ color: BLUE_SEC }}>
+          Ingresa tu número de radicado para conocer el estado y la respuesta de tu solicitud.
+        </p>
+
+        <div className="bg-white rounded-2xl p-8 shadow-sm mb-6" style={{ border: '1px solid #E5E9F5' }}>
+          <div className="mb-6">
+            <label className="block text-sm font-semibold text-gray-700 mb-1.5">
+              Número de Radicado *
+            </label>
+            <input
+              type="text"
+              value={radicado}
+              onChange={e => { setRadicado(e.target.value); setResultado(null); }}
+              placeholder="EJ. AXA-2026-123456"
+              className="w-full rounded-xl border px-4 py-3 text-sm text-gray-700 focus:outline-none transition-all"
+              style={{ borderColor: '#E5E9F5' }}
+              onFocus={e => (e.target.style.borderColor = BLUE)}
+              onBlur={e => (e.target.style.borderColor = '#E5E9F5')}
+            />
+          </div>
+
+          <button
+            onClick={handleConsultar}
+            disabled={!radicado.trim()}
+            className="w-full py-3 rounded-full font-semibold text-white transition-all disabled:opacity-40"
+            style={{ background: BLUE, fontFamily: "'Source Sans Pro', sans-serif" }}
+            onMouseEnter={e => { if (radicado.trim()) e.currentTarget.style.background = '#0000F7'; }}
+            onMouseLeave={e => (e.currentTarget.style.background = BLUE)}
+          >
+            Consultar
+          </button>
+
+          {resultado === 'found' && (
+            <div className="mt-6 p-4 rounded-xl" style={{ background: '#F0FDF4', border: '1px solid #BBF7D0' }}>
+              <div className="flex items-center gap-2 font-semibold text-green-700 mb-2">
+                <CheckCircle size={16} /> Radicado encontrado
+              </div>
+              <div className="text-sm text-green-600 space-y-1">
+                <p><strong>Radicado:</strong> {radicado.toUpperCase()}</p>
+                <p><strong>Estado:</strong> En gestión</p>
+                <p><strong>Tiempo estimado de respuesta:</strong> 15 días hábiles</p>
+              </div>
+            </div>
+          )}
+
+          {resultado === 'not_found' && (
+            <div className="mt-6 p-4 rounded-xl" style={{ background: '#FFF7ED', border: '1px solid #FED7AA' }}>
+              <div className="flex items-center gap-2 font-semibold text-orange-700 mb-1">
+                <AlertCircle size={16} /> No encontrado
+              </div>
+              <p className="text-sm text-orange-600">No encontramos un radicado con ese número. Verifica e intenta de nuevo.</p>
+            </div>
+          )}
+        </div>
+
+        {/* Protección de datos */}
+        <div className="p-4 rounded-xl flex items-start gap-3" style={{ background: '#F8FAFC', border: '1px solid #E2E8F0' }}>
+          <Shield size={16} className="text-slate-400 mt-0.5 shrink-0" />
+          <p className="text-xs text-slate-600 leading-relaxed">
+            <strong>Protección de datos:</strong> De conformidad con la Ley Habeas Data (Ley 1581 de 2012), AXA COLPATRIA garantiza la confidencialidad y seguridad de tus datos personales ingresados para la consulta de solicitudes.
+          </p>
+        </div>
+
+        <div className="text-center mt-6">
+          <button
+            onClick={onBack}
+            className="text-sm font-semibold hover:underline"
+            style={{ color: BLUE }}
+          >
+            ← Volver al inicio
+          </button>
+        </div>
       </div>
     </div>
   );
