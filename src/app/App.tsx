@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Search, ChevronDown, X, User, Shield, Paperclip, CheckCircle, Phone, Mail, MapPin, AlertCircle } from 'lucide-react';
+import { Search, ChevronDown, X, User, Shield, Paperclip, CheckCircle, Phone, MapPin, AlertCircle, ClipboardList } from 'lucide-react';
 
 const BLUE = '#00008F';
 const BLUE_SEC = '#4976BA';
@@ -220,7 +220,7 @@ function SelectorView({ onSelect }: { onSelect: (anon: boolean) => void }) {
       </h2>
       <p className="text-gray-400 mb-8">Selecciona la modalidad que mejor se adapte a tu situación.</p>
 
-      <div className="grid md:grid-cols-2 gap-6 mb-6">
+      <div className="grid md:grid-cols-3 gap-6 mb-6">
         {/* Identified */}
         <div className="bg-white shadow-sm hover:shadow-md transition-shadow group flex flex-col rounded-2xl" style={{ border: '1px solid #E5E9F5' }}>
           <div className="p-8 flex flex-col items-center text-center flex-1 justify-between">
@@ -235,12 +235,17 @@ function SelectorView({ onSelect }: { onSelect: (anon: boolean) => void }) {
                 Radica tu solicitud ante la compañía. Tu solicitud será registrada y gestionada de acuerdo con los tiempos y procedimientos establecidos.
               </p>
             </div>
-            <button
-              className="px-8 py-3 font-semibold text-white transition-all hover:opacity-90 rounded-full w-full max-w-xs cursor-pointer"
+            <a
+              href="https://crust-civil-94769050.figma.site/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-8 py-3 font-semibold text-white transition-all rounded-full w-full max-w-xs cursor-pointer text-center inline-block"
               style={{ background: BLUE, fontFamily: "'Source Sans Pro', sans-serif" }}
+              onMouseEnter={e => (e.currentTarget.style.background = '#0000F7')}
+              onMouseLeave={e => (e.currentTarget.style.background = BLUE)}
             >
               Radicar
-            </button>
+            </a>
           </div>
         </div>
 
@@ -258,12 +263,45 @@ function SelectorView({ onSelect }: { onSelect: (anon: boolean) => void }) {
                 Si deseas presentar una PQRS de forma anónima, utiliza esta opción. Serás redirigido a un canal externo donde podrás realizar el registro.
               </p>
             </div>
-            <button
-              className="px-8 py-3 font-semibold text-white transition-all hover:opacity-90 rounded-full w-full max-w-xs cursor-pointer"
+            <a
+              href="https://www.procuraduria.gov.co/Pages/solicituddeinformacionconidentificacionreservada.aspx"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-8 py-3 font-semibold text-white transition-all rounded-full w-full max-w-xs cursor-pointer text-center inline-block"
               style={{ background: BLUE, fontFamily: "'Source Sans Pro', sans-serif" }}
+              onMouseEnter={e => (e.currentTarget.style.background = '#0000F7')}
+              onMouseLeave={e => (e.currentTarget.style.background = BLUE)}
             >
               Radicar
-            </button>
+            </a>
+          </div>
+        </div>
+
+        {/* Consultar PQRS */}
+        <div className="bg-white shadow-sm hover:shadow-md transition-shadow group flex flex-col rounded-2xl" style={{ border: '1px solid #E5E9F5' }}>
+          <div className="p-8 flex flex-col items-center text-center flex-1 justify-between">
+            <div className="flex flex-col items-center w-full">
+              <div className="w-14 h-14 rounded-full flex items-center justify-center mb-5" style={{ background: '#EEF2FF' }}>
+                <ClipboardList size={28} style={{ color: BLUE }} />
+              </div>
+              <h3 className="text-xl mb-3" style={{ fontFamily: "'Publico Headline Web', serif", color: BLUE, fontWeight: 900 }}>
+                Consultar PQRS
+              </h3>
+              <p className="text-gray-500 text-sm leading-relaxed mb-6 max-w-sm">
+                ¿Ya radicaste una solicitud? Consulta el estado y el historial de tus PQRS ingresando tu número de radicado.
+              </p>
+            </div>
+            <a
+              href="https://lair-tech-29288756.figma.site"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-8 py-3 font-semibold transition-all rounded-full w-full max-w-xs cursor-pointer text-center inline-block"
+              style={{ border: `2px solid ${BLUE}`, color: BLUE, fontFamily: "'Source Sans Pro', sans-serif" }}
+              onMouseEnter={e => { e.currentTarget.style.background = '#0000F7'; e.currentTarget.style.borderColor = '#0000F7'; e.currentTarget.style.color = '#fff'; }}
+              onMouseLeave={e => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.borderColor = BLUE; e.currentTarget.style.color = BLUE; }}
+            >
+              Consultar estado
+            </a>
           </div>
         </div>
       </div>
