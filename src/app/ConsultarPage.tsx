@@ -33,7 +33,7 @@ export default function ConsultarPage() {
             Consulta el estado de tu PQRS
           </h1>
           <p className="text-center text-sm mb-8" style={{ color: '#4976BA' }}>
-            Ingresa los datos solicitados a continuación para conocer el estado y la<br />respuesta de tu radicado.
+            Ingresa los datos solicitados para conocer el estado de tu solicitud.
           </p>
 
           <div className="bg-white rounded-2xl p-8 shadow-sm mb-5" style={{ border: '1px solid #E5E9F5' }}>
