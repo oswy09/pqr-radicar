@@ -29,10 +29,10 @@ export default function ConsultarPage() {
       {/* Contenido */}
       <main className="flex-1 flex items-start justify-center px-4 pt-14 pb-10">
         <div className="w-full max-w-md">
-          <h1 className="text-3xl font-bold mb-2 text-center" style={{ fontFamily: "'Publico Headline Web', serif", color: '#343c3d' }}>
+          <h1 className="font-bold mb-2 text-center" style={{ fontFamily: "'Publico Headline Web', serif", color: '#343c3d', fontSize: '48px' }}>
             Consulta el estado de tu PQRS
           </h1>
-          <p className="text-center text-sm mb-8" style={{ color: '#4976BA' }}>
+          <p className="text-center mb-8" style={{ color: '#4976BA', fontSize: '20px' }}>
             Ingresa los datos solicitados para conocer el estado de tu solicitud.
           </p>
 

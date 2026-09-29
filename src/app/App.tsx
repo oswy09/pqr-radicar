@@ -217,10 +217,10 @@ function SelectorView({ onSelect, onConsultar }: { onSelect: (anon: boolean) => 
         </p>
       </div>
 
-      <h2 className="text-2xl font-bold mb-2" style={{ fontFamily: "'Publico Headline Web', serif", color: '#343c3d' }}>
+      <h2 className="font-bold mb-2" style={{ fontFamily: "'Publico Headline Web', serif", color: '#343c3d', fontSize: '48px' }}>
         ¿Cómo deseas radicar tu solicitud?
       </h2>
-      <p className="text-gray-400 mb-8">Selecciona la modalidad que mejor se adapte a tu situación.</p>
+      <p className="text-gray-400 mb-8" style={{ fontSize: '20px' }}>Selecciona la modalidad que mejor se adapte a tu situación.</p>
 
       <div className="grid md:grid-cols-3 gap-6 mb-6">
         {/* Identified */}
@@ -230,7 +230,7 @@ function SelectorView({ onSelect, onConsultar }: { onSelect: (anon: boolean) => 
               <div className="w-14 h-14 rounded-full flex items-center justify-center mb-5" style={{ background: '#EEF2FF' }}>
                 <User size={28} style={{ color: BLUE }} />
               </div>
-              <h3 className="text-xl mb-3" style={{ fontFamily: "'Publico Headline Web', serif", color: BLUE, fontWeight: 900 }}>
+              <h3 className="mb-3" style={{ fontFamily: "'Publico Headline Web', serif", color: BLUE, fontWeight: 700, fontSize: '20px' }}>
                 PQRS Ante AXA COLPATRIA
               </h3>
               <p className="text-gray-500 text-sm leading-relaxed mb-6 max-w-sm">
@@ -258,7 +258,7 @@ function SelectorView({ onSelect, onConsultar }: { onSelect: (anon: boolean) => 
               <div className="w-14 h-14 rounded-full flex items-center justify-center mb-5" style={{ background: '#EEF2FF' }}>
                 <Shield size={28} style={{ color: BLUE }} />
               </div>
-              <h3 className="text-xl mb-3" style={{ fontFamily: "'Publico Headline Web', serif", color: BLUE, fontWeight: 900 }}>
+              <h3 className="mb-3" style={{ fontFamily: "'Publico Headline Web', serif", color: BLUE, fontWeight: 700, fontSize: '20px' }}>
                 PQRS Anónima / Identidad Reservada
               </h3>
               <p className="text-gray-500 text-sm leading-relaxed mb-6 max-w-sm">
@@ -286,7 +286,7 @@ function SelectorView({ onSelect, onConsultar }: { onSelect: (anon: boolean) => 
               <div className="w-14 h-14 rounded-full flex items-center justify-center mb-5" style={{ background: '#EEF2FF' }}>
                 <ClipboardList size={28} style={{ color: BLUE }} />
               </div>
-              <h3 className="text-xl mb-3" style={{ fontFamily: "'Publico Headline Web', serif", color: BLUE, fontWeight: 900 }}>
+              <h3 className="mb-3" style={{ fontFamily: "'Publico Headline Web', serif", color: BLUE, fontWeight: 700, fontSize: '20px' }}>
                 Consultar PQRS
               </h3>
               <p className="text-gray-500 text-sm leading-relaxed mb-6 max-w-sm">
@@ -316,7 +316,7 @@ function SelectorView({ onSelect, onConsultar }: { onSelect: (anon: boolean) => 
 
       {/* Other channels */}
       <div className="p-6 border-t border-gray-100 mt-8">
-        <h4 className="font-bold mb-6 text-gray-700">Otros canales de atención</h4>
+        <h4 className="font-bold mb-6 text-gray-700" style={{ fontSize: '17px' }}>Otros canales de atención</h4>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* Línea integral */}
           <div className="flex items-start gap-4 p-5 rounded-2xl border border-gray-100" style={{ background: '#F8FAFF' }}>
@@ -325,7 +325,7 @@ function SelectorView({ onSelect, onConsultar }: { onSelect: (anon: boolean) => 
             </div>
             <div>
               <div className="text-xs text-gray-400 mb-1">Otros medios</div>
-              <h5 className="text-base font-bold text-gray-800 mb-2">Línea integral</h5>
+              <h5 className="font-bold text-gray-800 mb-2" style={{ fontSize: '15px' }}>Línea integral</h5>
               <div className="space-y-1 text-sm text-gray-600">
                 <p><strong>Bogotá:</strong> +57 (601) 423 5757</p>
                 <p><strong>Resto del país:</strong> +57 01-8000-512620</p>
@@ -342,7 +342,7 @@ function SelectorView({ onSelect, onConsultar }: { onSelect: (anon: boolean) => 
             <div className="flex flex-col justify-between">
               <div>
                 <div className="text-xs text-gray-400 mb-1">Oficinas físicas</div>
-                <h5 className="text-base font-bold text-gray-800 mb-2">Sucursales</h5>
+                <h5 className="font-bold text-gray-800 mb-2" style={{ fontSize: '15px' }}>Sucursales</h5>
                 <p className="text-sm text-gray-600 mb-4">Encuentra la oficina o punto de atención más cercano a ti.</p>
               </div>
               <a
@@ -439,7 +439,7 @@ function FormView({ step, form, set, anonima, canNext1, canNext2, canNext3, onNe
 function Step1({ form, set }: { form: FormData; set: (k: keyof FormData, v: string) => void }) {
   return (
     <div>
-      <h2 className="text-xl font-bold mb-1" style={{ fontFamily: "'Publico Headline Web', serif", color: BLUE }}>
+      <h2 className="font-bold mb-1" style={{ fontFamily: "'Publico Headline Web', serif", color: BLUE, fontSize: '24px' }}>
         ¿Qué tipo de solicitud deseas radicar?
       </h2>
       <p className="text-gray-400 text-sm mb-6">Selecciona una opción para continuar.</p>
@@ -469,7 +469,7 @@ function Step1({ form, set }: { form: FormData; set: (k: keyof FormData, v: stri
 function Step2({ form, set, anonima }: { form: FormData; set: (k: keyof FormData, v: string) => void; anonima: boolean }) {
   return (
     <div>
-      <h2 className="text-xl font-bold mb-1" style={{ fontFamily: "'Publico Headline Web', serif", color: BLUE }}>
+      <h2 className="font-bold mb-1" style={{ fontFamily: "'Publico Headline Web', serif", color: BLUE, fontSize: '24px' }}>
         {anonima ? 'Medio de contacto' : 'Datos personales'}
       </h2>
       <p className="text-gray-400 text-sm mb-6">
@@ -504,7 +504,7 @@ function Step2({ form, set, anonima }: { form: FormData; set: (k: keyof FormData
 function Step3({ form, set }: { form: FormData; set: (k: keyof FormData, v: string | File | null) => void }) {
   return (
     <div>
-      <h2 className="text-xl font-bold mb-1" style={{ fontFamily: "'Publico Headline Web', serif", color: BLUE }}>
+      <h2 className="font-bold mb-1" style={{ fontFamily: "'Publico Headline Web', serif", color: BLUE, fontSize: '24px' }}>
         Detalle de tu solicitud
       </h2>
       <p className="text-gray-400 text-sm mb-6">Mientras más detallada sea tu descripción, más rápido podremos atenderte.</p>
@@ -564,7 +564,7 @@ function Step4({ form, anonima }: { form: FormData; anonima: boolean }) {
 
   return (
     <div>
-      <h2 className="text-xl font-bold mb-1" style={{ fontFamily: "'Publico Headline Web', serif", color: BLUE }}>
+      <h2 className="font-bold mb-1" style={{ fontFamily: "'Publico Headline Web', serif", color: BLUE, fontSize: '24px' }}>
         Revisión de tu solicitud
       </h2>
       <p className="text-gray-400 text-sm mb-6">Verifica que todos los datos sean correctos antes de radicar.</p>
@@ -603,10 +603,10 @@ function SuccessView({ radicado, form, onReset }: { radicado: string; form: Form
       <div className="w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg" style={{ background: `linear-gradient(135deg, ${BLUE}, ${BLUE_SEC})` }}>
         <CheckCircle size={48} className="text-white" />
       </div>
-      <h2 className="text-3xl font-bold mb-3" style={{ fontFamily: "'Publico Headline Web', serif", color: BLUE }}>
+      <h2 className="font-bold mb-3" style={{ fontFamily: "'Publico Headline Web', serif", color: BLUE, fontSize: '48px' }}>
         ¡Solicitud radicada exitosamente!
       </h2>
-      <p className="text-gray-500 mb-8 text-lg">
+      <p className="text-gray-500 mb-8" style={{ fontSize: '20px' }}>
         Tu {tiposMap[form.tipo]?.label?.toLowerCase()} ha sido recibida y asignada a nuestro equipo.
       </p>
       <div className="bg-white rounded-2xl p-8 shadow-sm mb-8" style={{ border: '1px solid #E5E9F5' }}>
