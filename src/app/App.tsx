@@ -4,6 +4,14 @@ import { Search, ChevronDown, X, User, Shield, Paperclip, CheckCircle, Phone, Ma
 
 const BLUE = '#00008F';
 const BLUE_SEC = '#4976BA';
+const INK = '#1A1D21';
+
+/* Escala tipográfica (Publico Headline Bold para títulos) */
+const HEADING = { fontFamily: "'Publico Headline Web', serif", fontWeight: 700, fontStyle: 'normal', lineHeight: 1.15 } as const;
+const H1 = { ...HEADING, color: INK, fontSize: 'clamp(36px, 5vw, 56px)' };
+const H1_ACCENT = { color: BLUE, fontSize: '1.15em' };
+const H2 = { ...HEADING, color: INK, fontSize: 'clamp(28px, 3.5vw, 40px)' };
+const H3 = { ...HEADING, color: BLUE, fontSize: '24px', lineHeight: 1.25 };
 
 type Step = 1 | 2 | 3 | 4;
 
@@ -166,15 +174,26 @@ export default function App() {
       </header>
 
       {/* ── Banner hero ── */}
-      <div className="w-full bg-[#f4f6fa] border-b border-gray-200">
-        <div className="max-w-[1280px] mx-auto">
-          <img
-            src="https://res.cloudinary.com/ddqbnr9vo/image/upload/v1783696739/Banner_AXA__PQRS_1_oi7ojq.jpg"
-            alt="Radica tu PQRS - AXA COLPATRIA"
-            className="w-full h-auto block"
-          />
+      <section
+        className="w-full border-b border-gray-200 bg-cover bg-center bg-[#f4f6fa]"
+        style={{ backgroundImage: "url('https://res.cloudinary.com/ddqbnr9vo/image/upload/v1790785394/IMG_2791_aabktd.jpg')" }}
+      >
+        <div
+          className="w-full"
+          style={{ background: 'linear-gradient(90deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.85) 45%, rgba(255,255,255,0) 75%)' }}
+        >
+          <div className="max-w-[1280px] mx-auto px-4 md:px-6 flex items-center" style={{ minHeight: '360px' }}>
+            <div className="max-w-xl py-12">
+              <h1 style={H1}>
+                Radica tu <span style={H1_ACCENT}>PQRS</span>
+              </h1>
+              <p className="mt-4" style={{ color: INK, fontSize: '22px', lineHeight: 1.4 }}>
+                Tu opinión nos ayuda a mejorar.
+              </p>
+            </div>
+          </div>
         </div>
-      </div>
+      </section>
 
       {/* ── BODY ── */}
       <main className="flex-1 max-w-[1280px] mx-auto px-4 md:px-6 w-full py-10">
@@ -217,7 +236,7 @@ function SelectorView({ onSelect, onConsultar }: { onSelect: (anon: boolean) => 
         </p>
       </div>
 
-      <h2 className="text-center mb-2" style={{ fontFamily: "'Publico Headline Web', serif", fontWeight: 700, fontStyle: 'normal', color: '#343c3d', fontSize: '48px', lineHeight: 1.2 }}>
+      <h2 className="text-center mb-2" style={H2}>
         ¿Cómo deseas radicar tu solicitud?
       </h2>
       <p className="text-center text-[#1A1D21] mb-8" style={{ fontSize: '20px' }}>Selecciona la modalidad que mejor se adapte a tu situación.</p>
@@ -230,7 +249,7 @@ function SelectorView({ onSelect, onConsultar }: { onSelect: (anon: boolean) => 
               <div className="w-14 h-14 rounded-full flex items-center justify-center mb-5" style={{ background: '#EEF2FF' }}>
                 <User size={28} style={{ color: BLUE }} />
               </div>
-              <h3 className="mb-3" style={{ fontFamily: "'Publico Headline Web', serif", color: BLUE, fontWeight: 700, fontSize: '20px' }}>
+              <h3 className="mb-3" style={H3}>
                 PQRS Ante AXA COLPATRIA
               </h3>
               <p className="text-[#1A1D21] text-sm leading-relaxed mb-6 max-w-sm">
@@ -258,7 +277,7 @@ function SelectorView({ onSelect, onConsultar }: { onSelect: (anon: boolean) => 
               <div className="w-14 h-14 rounded-full flex items-center justify-center mb-5" style={{ background: '#EEF2FF' }}>
                 <Shield size={28} style={{ color: BLUE }} />
               </div>
-              <h3 className="mb-3" style={{ fontFamily: "'Publico Headline Web', serif", color: BLUE, fontWeight: 700, fontSize: '20px' }}>
+              <h3 className="mb-3" style={H3}>
                 PQRS Anónima / Identidad Reservada
               </h3>
               <p className="text-[#1A1D21] text-sm leading-relaxed mb-6 max-w-sm">
@@ -286,7 +305,7 @@ function SelectorView({ onSelect, onConsultar }: { onSelect: (anon: boolean) => 
               <div className="w-14 h-14 rounded-full flex items-center justify-center mb-5" style={{ background: '#EEF2FF' }}>
                 <ClipboardList size={28} style={{ color: BLUE }} />
               </div>
-              <h3 className="mb-3" style={{ fontFamily: "'Publico Headline Web', serif", color: BLUE, fontWeight: 700, fontSize: '20px' }}>
+              <h3 className="mb-3" style={H3}>
                 Consultar PQRS
               </h3>
               <p className="text-[#1A1D21] text-sm leading-relaxed mb-6 max-w-sm">
@@ -316,18 +335,18 @@ function SelectorView({ onSelect, onConsultar }: { onSelect: (anon: boolean) => 
 
       {/* Other channels */}
       <div className="py-8 border-t border-gray-100 mt-8">
-        <h3 className="text-center mb-2 text-[#1A1D21]" style={{ fontFamily: "'Publico Headline Web', serif", fontWeight: 700, fontSize: '28px', lineHeight: 1.2 }}>
+        <h2 className="text-center mb-2" style={H2}>
           Otros canales de atención
-        </h3>
+        </h2>
         <p className="text-center text-[#1A1D21] mb-8" style={{ fontSize: '16px' }}>También puedes comunicarte con nosotros por estos medios.</p>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
           {/* Línea integral */}
-          <div className="flex flex-col items-center text-center p-6 rounded-2xl border border-gray-100" style={{ background: '#F8FAFF' }}>
+          <div className="flex flex-col items-center text-center p-8 rounded-2xl border border-gray-100" style={{ background: '#F8FAFF' }}>
             <div className="w-12 h-12 rounded-full flex items-center justify-center mb-4" style={{ background: '#EEF2FF' }}>
               <Phone size={22} style={{ color: BLUE }} />
             </div>
-            <div className="text-xs font-semibold uppercase tracking-wide text-[#1A1D21] mb-1">Otros medios</div>
-            <h4 className="text-[#1A1D21] mb-3" style={{ fontFamily: "'Publico Headline Web', serif", fontWeight: 700, fontSize: '20px' }}>Línea integral</h4>
+            <div className="text-sm font-semibold text-[#1A1D21] mb-1">Otros medios</div>
+            <h3 className="mb-3" style={{ ...H3, color: INK }}>Línea integral</h3>
             <div className="space-y-1 text-sm text-[#1A1D21]">
               <p><strong>Bogotá:</strong> +57 (601) 423 5757</p>
               <p><strong>Resto del país:</strong> +57 01-8000-512620</p>
@@ -336,12 +355,12 @@ function SelectorView({ onSelect, onConsultar }: { onSelect: (anon: boolean) => 
           </div>
 
           {/* Sucursales */}
-          <div className="flex flex-col items-center text-center p-6 rounded-2xl border border-gray-100" style={{ background: '#F8FAFF' }}>
+          <div className="flex flex-col items-center text-center p-8 rounded-2xl border border-gray-100" style={{ background: '#F8FAFF' }}>
             <div className="w-12 h-12 rounded-full flex items-center justify-center mb-4" style={{ background: '#EEF2FF' }}>
               <MapPin size={22} style={{ color: BLUE }} />
             </div>
-            <div className="text-xs font-semibold uppercase tracking-wide text-[#1A1D21] mb-1">Oficinas físicas</div>
-            <h4 className="text-[#1A1D21] mb-3" style={{ fontFamily: "'Publico Headline Web', serif", fontWeight: 700, fontSize: '20px' }}>Sucursales</h4>
+            <div className="text-sm font-semibold text-[#1A1D21] mb-1">Oficinas físicas</div>
+            <h3 className="mb-3" style={{ ...H3, color: INK }}>Sucursales</h3>
             <p className="text-sm text-[#1A1D21] mb-4">Encuentra la oficina o punto de atención más cercano a ti.</p>
             <a
               href="https://www.axacolpatria.co/es/sac/red-oficinas"
