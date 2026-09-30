@@ -38,7 +38,7 @@ export default function ConsultarPage() {
 
           <div className="bg-white rounded-2xl p-8 shadow-sm mb-5" style={{ border: '1px solid #E5E9F5' }}>
             <div className="mb-6">
-              <label className="block text-sm font-semibold text-gray-700 mb-1.5">
+              <label className="block text-sm font-semibold text-[#1A1D21] mb-1.5">
                 Número de Radicado *
               </label>
               <input
@@ -46,7 +46,7 @@ export default function ConsultarPage() {
                 value={radicado}
                 onChange={e => { setRadicado(e.target.value); setResultado(null); }}
                 placeholder="EJ. AXA-2026-123456"
-                className="w-full rounded-xl border px-4 py-3 text-sm text-gray-700 focus:outline-none transition-all"
+                className="w-full rounded-xl border px-4 py-3 text-sm text-[#1A1D21] focus:outline-none transition-all"
                 style={{ borderColor: '#E5E9F5' }}
                 onFocus={e => (e.target.style.borderColor = BLUE)}
                 onBlur={e => (e.target.style.borderColor = '#E5E9F5')}

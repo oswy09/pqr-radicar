@@ -3,7 +3,8 @@
 /* Definición de la fuente Publico Headline Bold */
 @font-face {
     font-family: 'Publico Headline Web';
-    src: url('/fonts/PublicoHeadline-Bold-Web.woff') format('woff');
+    src: url('https://res.cloudinary.com/ddqbnr9vo/raw/upload/v1750205338/PublicoHeadline-Bold-Web_nphjdn.woff2') format('woff2'),
+         url('/fonts/PublicoHeadline-Bold-Web.woff2') format('woff2');
     font-weight: 700;
     font-style: normal;
     font-display: swap;
