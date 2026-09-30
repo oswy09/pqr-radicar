@@ -181,13 +181,13 @@ export default function App() {
           >
             <div
               className="flex items-center px-6 md:px-20"
-              style={{ minHeight: 'clamp(160px, 18vw, 230px)', background: 'linear-gradient(90deg, rgba(244,246,250,0.95) 0%, rgba(244,246,250,0.8) 50%, rgba(244,246,250,0) 80%)' }}
+              style={{ minHeight: 'clamp(220px, 24vw, 320px)', background: 'linear-gradient(90deg, rgba(244,246,250,0.95) 0%, rgba(244,246,250,0.8) 50%, rgba(244,246,250,0) 80%)' }}
             >
               <div className="py-8">
                 <h1 style={H1}>
                   Radica tu <span style={{ color: BLUE }}>PQRS.</span>
                   <br />
-                  Tu opinión nos ayuda a mejorar.
+                  Tu opinión nos ayuda a mejorar
                 </h1>
                 <ul className="mt-5 flex flex-col md:flex-row md:flex-wrap gap-x-8 gap-y-2 text-[15px]" style={{ color: INK }}>
                   {['Trámite 100% digital', 'Respuesta oportuna', 'Seguimiento en línea'].map(label => (
@@ -260,7 +260,7 @@ function SelectorView({ onSelect, onConsultar }: { onSelect: (anon: boolean) => 
               <h3 className="mb-3" style={H3}>
                 PQRS Ante AXA COLPATRIA
               </h3>
-              <p className="text-[#1A1D21] text-sm leading-relaxed mb-6 max-w-sm">
+              <p className="text-[#1A1D21] text-base leading-relaxed mb-6 max-w-sm">
                 Radica tu solicitud ante la compañía. Tu solicitud será registrada y gestionada de acuerdo con los tiempos y procedimientos establecidos.
               </p>
             </div>
@@ -288,7 +288,7 @@ function SelectorView({ onSelect, onConsultar }: { onSelect: (anon: boolean) => 
               <h3 className="mb-3" style={H3}>
                 PQRS Anónima / Identidad Reservada
               </h3>
-              <p className="text-[#1A1D21] text-sm leading-relaxed mb-6 max-w-sm">
+              <p className="text-[#1A1D21] text-base leading-relaxed mb-6 max-w-sm">
                 Si deseas presentar una PQRS de forma anónima, utiliza esta opción. Serás redirigido a un canal externo donde podrás realizar el registro.
               </p>
             </div>
@@ -316,7 +316,7 @@ function SelectorView({ onSelect, onConsultar }: { onSelect: (anon: boolean) => 
               <h3 className="mb-3" style={H3}>
                 Consultar PQRS
               </h3>
-              <p className="text-[#1A1D21] text-sm leading-relaxed mb-6 max-w-sm">
+              <p className="text-[#1A1D21] text-base leading-relaxed mb-6 max-w-sm">
                 ¿Ya radicaste una solicitud? Consulta el estado y el historial de tus PQRS ingresando tu número de radicado.
               </p>
             </div>
