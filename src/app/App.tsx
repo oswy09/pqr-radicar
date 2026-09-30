@@ -107,19 +107,19 @@ export default function App() {
       <div className="bg-gray-50 border-b border-gray-200">
         <div className="max-w-[1280px] mx-auto px-4 flex items-center h-8">
           <div className="flex items-center gap-6">
-            <a href="#" className="text-xs text-gray-600 hover:text-[#00008F]" style={{ fontFamily: "'Source Sans Pro', sans-serif" }}>Personas</a>
-            <a href="#" className="text-xs text-gray-600 hover:text-[#00008F]" style={{ fontFamily: "'Source Sans Pro', sans-serif" }}>Empresas</a>
+            <a href="#" className="text-xs text-[#1A1D21] hover:text-[#00008F]" style={{ fontFamily: "'Source Sans Pro', sans-serif" }}>Personas</a>
+            <a href="#" className="text-xs text-[#1A1D21] hover:text-[#00008F]" style={{ fontFamily: "'Source Sans Pro', sans-serif" }}>Empresas</a>
           </div>
           <div className="flex items-center gap-5 ml-auto">
-            <a href="#" className="text-xs text-gray-500 hover:text-[#00008F]" style={{ fontFamily: "'Source Sans Pro', sans-serif" }}>Ley de transparencia</a>
+            <a href="#" className="text-xs text-[#1A1D21] hover:text-[#00008F]" style={{ fontFamily: "'Source Sans Pro', sans-serif" }}>Ley de transparencia</a>
             <div className="flex items-center gap-1 cursor-pointer group">
               <User size={13} className="text-gray-400 group-hover:text-[#00008F]" />
-              <span className="text-xs text-gray-500 group-hover:text-[#00008F]" style={{ fontFamily: "'Source Sans Pro', sans-serif" }}>Pagos y facturación</span>
+              <span className="text-xs text-[#1A1D21] group-hover:text-[#00008F]" style={{ fontFamily: "'Source Sans Pro', sans-serif" }}>Pagos y facturación</span>
               <ChevronDown size={12} className="text-gray-400" />
             </div>
             <div className="flex items-center gap-1 cursor-pointer group">
               <User size={13} className="text-gray-400 group-hover:text-[#00008F]" />
-              <span className="text-xs text-gray-500 group-hover:text-[#00008F]" style={{ fontFamily: "'Source Sans Pro', sans-serif" }}>Ingresa a tu cuenta</span>
+              <span className="text-xs text-[#1A1D21] group-hover:text-[#00008F]" style={{ fontFamily: "'Source Sans Pro', sans-serif" }}>Ingresa a tu cuenta</span>
               <ChevronDown size={12} className="text-gray-400" />
             </div>
             <button className="border border-[#00008F] text-[#00008F] hover:bg-[#00008F] hover:text-white text-xs font-semibold px-4 h-8 transition-colors" style={{ fontFamily: "'Source Sans Pro', sans-serif" }}>
@@ -157,7 +157,7 @@ export default function App() {
               <button className="border border-[#00008F] text-[#00008F] hover:bg-[#00008F] hover:text-white text-sm font-semibold px-4 py-2 transition-colors whitespace-nowrap" style={{ fontFamily: "'Source Sans Pro', sans-serif" }}>
                 Contáctanos
               </button>
-              <button className="p-2 text-gray-500 hover:text-[#00008F] transition-colors">
+              <button className="p-2 text-[#1A1D21] hover:text-[#00008F] transition-colors">
                 <Search size={18} />
               </button>
             </div>
@@ -220,7 +220,7 @@ function SelectorView({ onSelect, onConsultar }: { onSelect: (anon: boolean) => 
       <h2 className="text-center mb-2" style={{ fontFamily: "'Publico Headline Web', serif", fontWeight: 700, fontStyle: 'normal', color: '#343c3d', fontSize: '48px', lineHeight: 1.2 }}>
         ¿Cómo deseas radicar tu solicitud?
       </h2>
-      <p className="text-center text-gray-400 mb-8" style={{ fontSize: '20px' }}>Selecciona la modalidad que mejor se adapte a tu situación.</p>
+      <p className="text-center text-[#1A1D21] mb-8" style={{ fontSize: '20px' }}>Selecciona la modalidad que mejor se adapte a tu situación.</p>
 
       <div className="grid md:grid-cols-3 gap-6 mb-6">
         {/* Identified */}
@@ -233,7 +233,7 @@ function SelectorView({ onSelect, onConsultar }: { onSelect: (anon: boolean) => 
               <h3 className="mb-3" style={{ fontFamily: "'Publico Headline Web', serif", color: BLUE, fontWeight: 700, fontSize: '20px' }}>
                 PQRS Ante AXA COLPATRIA
               </h3>
-              <p className="text-gray-500 text-sm leading-relaxed mb-6 max-w-sm">
+              <p className="text-[#1A1D21] text-sm leading-relaxed mb-6 max-w-sm">
                 Radica tu solicitud ante la compañía. Tu solicitud será registrada y gestionada de acuerdo con los tiempos y procedimientos establecidos.
               </p>
             </div>
@@ -261,7 +261,7 @@ function SelectorView({ onSelect, onConsultar }: { onSelect: (anon: boolean) => 
               <h3 className="mb-3" style={{ fontFamily: "'Publico Headline Web', serif", color: BLUE, fontWeight: 700, fontSize: '20px' }}>
                 PQRS Anónima / Identidad Reservada
               </h3>
-              <p className="text-gray-500 text-sm leading-relaxed mb-6 max-w-sm">
+              <p className="text-[#1A1D21] text-sm leading-relaxed mb-6 max-w-sm">
                 Si deseas presentar una PQRS de forma anónima, utiliza esta opción. Serás redirigido a un canal externo donde podrás realizar el registro.
               </p>
             </div>
@@ -289,7 +289,7 @@ function SelectorView({ onSelect, onConsultar }: { onSelect: (anon: boolean) => 
               <h3 className="mb-3" style={{ fontFamily: "'Publico Headline Web', serif", color: BLUE, fontWeight: 700, fontSize: '20px' }}>
                 Consultar PQRS
               </h3>
-              <p className="text-gray-500 text-sm leading-relaxed mb-6 max-w-sm">
+              <p className="text-[#1A1D21] text-sm leading-relaxed mb-6 max-w-sm">
                 ¿Ya radicaste una solicitud? Consulta el estado y el historial de tus PQRS ingresando tu número de radicado.
               </p>
             </div>
@@ -309,52 +309,49 @@ function SelectorView({ onSelect, onConsultar }: { onSelect: (anon: boolean) => 
       {/* Info de reserva de identidad */}
       <div className="p-4 mb-10 rounded-xl flex items-start gap-3 border border-slate-200" style={{ background: '#F8FAFC' }}>
         <Shield size={18} className="text-slate-500 mt-0.5 shrink-0" />
-        <p className="text-xs leading-relaxed text-slate-700">
+        <p className="text-xs leading-relaxed text-[#1A1D21]">
           <strong>Información sobre identidad reservada:</strong> Conforme al Artículo 38 Ley 190/1995, Art. 69 Ley 734/2002 y Art. 81 Ley 962/2005. Si deseas que tu solicitud sea tratada bajo la modalidad de identidad reservada, ten en cuenta que el trámite se debe adelantar directamente ante la <strong>Procuraduría General de la Nación</strong>.
         </p>
       </div>
 
       {/* Other channels */}
-      <div className="p-6 border-t border-gray-100 mt-8">
-        <h4 className="font-bold mb-6 text-gray-700" style={{ fontSize: '17px' }}>Otros canales de atención</h4>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="py-8 border-t border-gray-100 mt-8">
+        <h3 className="text-center mb-2 text-[#1A1D21]" style={{ fontFamily: "'Publico Headline Web', serif", fontWeight: 700, fontSize: '28px', lineHeight: 1.2 }}>
+          Otros canales de atención
+        </h3>
+        <p className="text-center text-[#1A1D21] mb-8" style={{ fontSize: '16px' }}>También puedes comunicarte con nosotros por estos medios.</p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
           {/* Línea integral */}
-          <div className="flex items-start gap-4 p-5 rounded-2xl border border-gray-100" style={{ background: '#F8FAFF' }}>
-            <div className="w-10 h-10 rounded-full flex items-center justify-center shrink-0 mt-0.5" style={{ background: '#EEF2FF' }}>
-              <Phone size={20} style={{ color: BLUE }} />
+          <div className="flex flex-col items-center text-center p-6 rounded-2xl border border-gray-100" style={{ background: '#F8FAFF' }}>
+            <div className="w-12 h-12 rounded-full flex items-center justify-center mb-4" style={{ background: '#EEF2FF' }}>
+              <Phone size={22} style={{ color: BLUE }} />
             </div>
-            <div>
-              <div className="text-xs text-gray-400 mb-1">Otros medios</div>
-              <h5 className="font-bold text-gray-800 mb-2" style={{ fontSize: '15px' }}>Línea integral</h5>
-              <div className="space-y-1 text-sm text-gray-600">
-                <p><strong>Bogotá:</strong> +57 (601) 423 5757</p>
-                <p><strong>Resto del país:</strong> +57 01-8000-512620</p>
-                <p><strong>Desde tu celular:</strong> #247</p>
-              </div>
+            <div className="text-xs font-semibold uppercase tracking-wide text-[#1A1D21] mb-1">Otros medios</div>
+            <h4 className="text-[#1A1D21] mb-3" style={{ fontFamily: "'Publico Headline Web', serif", fontWeight: 700, fontSize: '20px' }}>Línea integral</h4>
+            <div className="space-y-1 text-sm text-[#1A1D21]">
+              <p><strong>Bogotá:</strong> +57 (601) 423 5757</p>
+              <p><strong>Resto del país:</strong> +57 01-8000-512620</p>
+              <p><strong>Desde tu celular:</strong> #247</p>
             </div>
           </div>
 
           {/* Sucursales */}
-          <div className="flex items-start gap-4 p-5 rounded-2xl border border-gray-100" style={{ background: '#F8FAFF' }}>
-            <div className="w-10 h-10 rounded-full flex items-center justify-center shrink-0 mt-0.5" style={{ background: '#EEF2FF' }}>
-              <MapPin size={20} style={{ color: BLUE }} />
+          <div className="flex flex-col items-center text-center p-6 rounded-2xl border border-gray-100" style={{ background: '#F8FAFF' }}>
+            <div className="w-12 h-12 rounded-full flex items-center justify-center mb-4" style={{ background: '#EEF2FF' }}>
+              <MapPin size={22} style={{ color: BLUE }} />
             </div>
-            <div className="flex flex-col justify-between">
-              <div>
-                <div className="text-xs text-gray-400 mb-1">Oficinas físicas</div>
-                <h5 className="font-bold text-gray-800 mb-2" style={{ fontSize: '15px' }}>Sucursales</h5>
-                <p className="text-sm text-gray-600 mb-4">Encuentra la oficina o punto de atención más cercano a ti.</p>
-              </div>
-              <a
-                href="https://www.axacolpatria.co/es/sac/red-oficinas"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center text-sm font-semibold hover:underline"
-                style={{ color: BLUE }}
-              >
-                Ver puntos de atención →
-              </a>
-            </div>
+            <div className="text-xs font-semibold uppercase tracking-wide text-[#1A1D21] mb-1">Oficinas físicas</div>
+            <h4 className="text-[#1A1D21] mb-3" style={{ fontFamily: "'Publico Headline Web', serif", fontWeight: 700, fontSize: '20px' }}>Sucursales</h4>
+            <p className="text-sm text-[#1A1D21] mb-4">Encuentra la oficina o punto de atención más cercano a ti.</p>
+            <a
+              href="https://www.axacolpatria.co/es/sac/red-oficinas"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center text-sm font-semibold hover:underline mt-auto"
+              style={{ color: BLUE }}
+            >
+              Ver puntos de atención →
+            </a>
           </div>
         </div>
       </div>
@@ -442,7 +439,7 @@ function Step1({ form, set }: { form: FormData; set: (k: keyof FormData, v: stri
       <h2 className="font-bold mb-1" style={{ fontFamily: "'Publico Headline Web', serif", color: BLUE, fontSize: '24px' }}>
         ¿Qué tipo de solicitud deseas radicar?
       </h2>
-      <p className="text-gray-400 text-sm mb-6">Selecciona una opción para continuar.</p>
+      <p className="text-[#1A1D21] text-sm mb-6">Selecciona una opción para continuar.</p>
       <div className="grid sm:grid-cols-2 gap-4">
         {Object.entries(tiposMap).map(([key, t]) => (
           <button
@@ -452,8 +449,8 @@ function Step1({ form, set }: { form: FormData; set: (k: keyof FormData, v: stri
             style={{ borderColor: form.tipo === key ? t.color : '#E5E9F5', background: form.tipo === key ? `${t.color}08` : '#fff' }}
           >
             <div className="text-2xl mb-3">{t.icon}</div>
-            <div className="font-bold text-gray-800 mb-1">{t.label}</div>
-            <div className="text-xs text-gray-400 leading-relaxed">{t.desc}</div>
+            <div className="font-bold text-[#1A1D21] mb-1">{t.label}</div>
+            <div className="text-xs text-[#1A1D21] leading-relaxed">{t.desc}</div>
             {form.tipo === key && (
               <div className="mt-3 flex items-center gap-1 text-xs font-semibold" style={{ color: t.color }}>
                 <CheckCircle size={13} /> Seleccionado
@@ -472,7 +469,7 @@ function Step2({ form, set, anonima }: { form: FormData; set: (k: keyof FormData
       <h2 className="font-bold mb-1" style={{ fontFamily: "'Publico Headline Web', serif", color: BLUE, fontSize: '24px' }}>
         {anonima ? 'Medio de contacto' : 'Datos personales'}
       </h2>
-      <p className="text-gray-400 text-sm mb-6">
+      <p className="text-[#1A1D21] text-sm mb-6">
         {anonima
           ? 'Tu identidad permanecerá en reserva. Solo necesitamos un email para enviarte el número de radicado.'
           : 'Completa tus datos para que podamos responderte personalizadamente.'}
@@ -507,35 +504,35 @@ function Step3({ form, set }: { form: FormData; set: (k: keyof FormData, v: stri
       <h2 className="font-bold mb-1" style={{ fontFamily: "'Publico Headline Web', serif", color: BLUE, fontSize: '24px' }}>
         Detalle de tu solicitud
       </h2>
-      <p className="text-gray-400 text-sm mb-6">Mientras más detallada sea tu descripción, más rápido podremos atenderte.</p>
+      <p className="text-[#1A1D21] text-sm mb-6">Mientras más detallada sea tu descripción, más rápido podremos atenderte.</p>
       <div className="space-y-4">
         <SelectField label="Producto o servicio afectado *" value={form.producto} options={productos} onChange={v => set('producto', v)} />
         <Field label="Número de póliza / contrato (opcional)" placeholder="Ej. 12345678" value={form.numeropoliza} onChange={v => set('numeropoliza', v)} />
         <div>
-          <label className="block text-sm font-semibold text-gray-700 mb-1.5">
-            Descripción detallada * <span className="font-normal text-gray-400 text-xs">(mínimo 20 caracteres)</span>
+          <label className="block text-sm font-semibold text-[#1A1D21] mb-1.5">
+            Descripción detallada * <span className="font-normal text-[#1A1D21] text-xs">(mínimo 20 caracteres)</span>
           </label>
           <textarea
             rows={5}
             value={form.descripcion}
             onChange={e => set('descripcion', e.target.value)}
             placeholder="Describe con claridad el motivo de tu solicitud, fechas relevantes y cualquier información que consideres importante..."
-            className="w-full rounded-xl border px-4 py-3 text-sm text-gray-700 resize-none focus:outline-none transition-all"
+            className="w-full rounded-xl border px-4 py-3 text-sm text-[#1A1D21] resize-none focus:outline-none transition-all"
             style={{ borderColor: '#E5E9F5' }}
           />
-          <div className="text-xs text-gray-400 mt-1 text-right">{form.descripcion.length} caracteres</div>
+          <div className="text-xs text-[#1A1D21] mt-1 text-right">{form.descripcion.length} caracteres</div>
         </div>
         <div>
-          <label className="block text-sm font-semibold text-gray-700 mb-1.5">Adjuntar documentos (opcional)</label>
+          <label className="block text-sm font-semibold text-[#1A1D21] mb-1.5">Adjuntar documentos (opcional)</label>
           <label className="flex items-center gap-3 p-4 rounded-xl border-2 border-dashed cursor-pointer hover:border-blue-300 transition-colors" style={{ borderColor: '#E5E9F5' }}>
             <Paperclip size={20} className="text-gray-400" />
             <div>
-              <div className="text-sm font-medium text-gray-600">{form.archivo ? form.archivo.name : 'Adjuntar archivo'}</div>
-              <div className="text-xs text-gray-400">PDF, JPG, PNG hasta 5MB</div>
+              <div className="text-sm font-medium text-[#1A1D21]">{form.archivo ? form.archivo.name : 'Adjuntar archivo'}</div>
+              <div className="text-xs text-[#1A1D21]">PDF, JPG, PNG hasta 5MB</div>
             </div>
             <input type="file" className="hidden" accept=".pdf,.jpg,.jpeg,.png" onChange={e => set('archivo', e.target.files?.[0] ?? null)} />
             {form.archivo && (
-              <button type="button" onClick={e => { e.preventDefault(); set('archivo', null); }} className="ml-auto text-gray-400 hover:text-red-400 transition-colors">
+              <button type="button" onClick={e => { e.preventDefault(); set('archivo', null); }} className="ml-auto text-[#1A1D21] hover:text-red-400 transition-colors">
                 <X size={16} />
               </button>
             )}
@@ -567,21 +564,21 @@ function Step4({ form, anonima }: { form: FormData; anonima: boolean }) {
       <h2 className="font-bold mb-1" style={{ fontFamily: "'Publico Headline Web', serif", color: BLUE, fontSize: '24px' }}>
         Revisión de tu solicitud
       </h2>
-      <p className="text-gray-400 text-sm mb-6">Verifica que todos los datos sean correctos antes de radicar.</p>
+      <p className="text-[#1A1D21] text-sm mb-6">Verifica que todos los datos sean correctos antes de radicar.</p>
       {tipo && (
         <div className="flex items-center gap-3 p-4 rounded-xl mb-5" style={{ background: `${tipo.color}10`, border: `1px solid ${tipo.color}30` }}>
           <span className="text-2xl">{tipo.icon}</span>
           <div>
             <div className="font-bold" style={{ color: tipo.color }}>{tipo.label}</div>
-            <div className="text-xs text-gray-500">{tipo.desc}</div>
+            <div className="text-xs text-[#1A1D21]">{tipo.desc}</div>
           </div>
         </div>
       )}
       <div className="divide-y divide-gray-50 rounded-xl overflow-hidden" style={{ border: '1px solid #E5E9F5' }}>
         {rows.map(r => (
           <div key={r.label} className="flex justify-between items-start px-5 py-3 bg-white">
-            <span className="text-sm text-gray-400 w-40 shrink-0">{r.label}</span>
-            <span className="text-sm font-medium text-gray-700 text-right">{r.value}</span>
+            <span className="text-sm text-[#1A1D21] w-40 shrink-0">{r.label}</span>
+            <span className="text-sm font-medium text-[#1A1D21] text-right">{r.value}</span>
           </div>
         ))}
       </div>
@@ -606,13 +603,13 @@ function SuccessView({ radicado, form, onReset }: { radicado: string; form: Form
       <h2 className="font-bold mb-3" style={{ fontFamily: "'Publico Headline Web', serif", color: BLUE, fontSize: '48px' }}>
         ¡Solicitud radicada exitosamente!
       </h2>
-      <p className="text-gray-500 mb-8" style={{ fontSize: '20px' }}>
+      <p className="text-[#1A1D21] mb-8" style={{ fontSize: '20px' }}>
         Tu {tiposMap[form.tipo]?.label?.toLowerCase()} ha sido recibida y asignada a nuestro equipo.
       </p>
       <div className="bg-white rounded-2xl p-8 shadow-sm mb-8" style={{ border: '1px solid #E5E9F5' }}>
-        <div className="text-sm text-gray-400 mb-2">Número de radicado</div>
+        <div className="text-sm text-[#1A1D21] mb-2">Número de radicado</div>
         <div className="text-3xl font-bold tracking-wider mb-4" style={{ color: BLUE, fontFamily: 'monospace' }}>{radicado}</div>
-        <p className="text-sm text-gray-500">
+        <p className="text-sm text-[#1A1D21]">
           Guarda este número para hacer seguimiento. Enviaremos confirmación a <strong>{form.email}</strong>.
         </p>
         <div className="grid grid-cols-3 gap-4 mt-6 pt-6 border-t border-gray-50">
@@ -622,8 +619,8 @@ function SuccessView({ radicado, form, onReset }: { radicado: string; form: Form
             { label: 'Tiempo de respuesta', value: '15 días hábiles' },
           ].map(i => (
             <div key={i.label} className="text-center">
-              <div className="text-xs text-gray-400 mb-1">{i.label}</div>
-              <div className="text-sm font-bold text-gray-700">{i.value}</div>
+              <div className="text-xs text-[#1A1D21] mb-1">{i.label}</div>
+              <div className="text-sm font-bold text-[#1A1D21]">{i.value}</div>
             </div>
           ))}
         </div>
@@ -646,11 +643,11 @@ function Field({ label, type = 'text', placeholder, value, onChange }: {
 }) {
   return (
     <div>
-      <label className="block text-sm font-semibold text-gray-700 mb-1.5">{label}</label>
+      <label className="block text-sm font-semibold text-[#1A1D21] mb-1.5">{label}</label>
       <input
         type={type} value={value} placeholder={placeholder}
         onChange={e => onChange(e.target.value)}
-        className="w-full rounded-xl border px-4 py-3 text-sm text-gray-700 focus:outline-none transition-all"
+        className="w-full rounded-xl border px-4 py-3 text-sm text-[#1A1D21] focus:outline-none transition-all"
         style={{ borderColor: '#E5E9F5' }}
         onFocus={e => (e.target.style.borderColor = BLUE)}
         onBlur={e => (e.target.style.borderColor = '#E5E9F5')}
@@ -664,11 +661,11 @@ function SelectField({ label, value, options, onChange }: {
 }) {
   return (
     <div>
-      <label className="block text-sm font-semibold text-gray-700 mb-1.5">{label}</label>
+      <label className="block text-sm font-semibold text-[#1A1D21] mb-1.5">{label}</label>
       <div className="relative">
         <select
           value={value} onChange={e => onChange(e.target.value)}
-          className="w-full appearance-none rounded-xl border px-4 py-3 text-sm text-gray-700 focus:outline-none bg-white transition-all pr-10"
+          className="w-full appearance-none rounded-xl border px-4 py-3 text-sm text-[#1A1D21] focus:outline-none bg-white transition-all pr-10"
           style={{ borderColor: '#E5E9F5' }}
         >
           <option value="">Seleccionar…</option>

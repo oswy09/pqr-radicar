@@ -110,19 +110,19 @@ export default function ConsultarApp() {
       <div className="bg-gray-50 border-b border-gray-200">
         <div className="max-w-[1280px] mx-auto px-4 flex items-center h-8">
           <div className="flex items-center gap-6">
-            <a href="#" className="text-xs text-gray-600 hover:text-[#00008F]">Personas</a>
-            <a href="#" className="text-xs text-gray-600 hover:text-[#00008F]">Empresas</a>
+            <a href="#" className="text-xs text-[#1A1D21] hover:text-[#00008F]">Personas</a>
+            <a href="#" className="text-xs text-[#1A1D21] hover:text-[#00008F]">Empresas</a>
           </div>
           <div className="flex items-center gap-5 ml-auto">
-            <a href="#" className="text-xs text-gray-500 hover:text-[#00008F]">Ley de transparencia</a>
+            <a href="#" className="text-xs text-[#1A1D21] hover:text-[#00008F]">Ley de transparencia</a>
             <div className="flex items-center gap-1 cursor-pointer group">
               <User size={13} className="text-gray-400 group-hover:text-[#00008F]" />
-              <span className="text-xs text-gray-500 group-hover:text-[#00008F]">Pagos y facturación</span>
+              <span className="text-xs text-[#1A1D21] group-hover:text-[#00008F]">Pagos y facturación</span>
               <ChevronDown size={12} className="text-gray-400" />
             </div>
             <div className="flex items-center gap-1 cursor-pointer group">
               <User size={13} className="text-gray-400 group-hover:text-[#00008F]" />
-              <span className="text-xs text-gray-500 group-hover:text-[#00008F]">Ingresa a tu cuenta</span>
+              <span className="text-xs text-[#1A1D21] group-hover:text-[#00008F]">Ingresa a tu cuenta</span>
               <ChevronDown size={12} className="text-gray-400" />
             </div>
             <button className="border border-[#00008F] text-[#00008F] hover:bg-[#00008F] hover:text-white text-xs font-semibold px-4 h-8 transition-colors">
@@ -159,7 +159,7 @@ export default function ConsultarApp() {
               <button className="border border-[#00008F] text-[#00008F] hover:bg-[#00008F] hover:text-white text-sm font-semibold px-4 py-2 transition-colors whitespace-nowrap">
                 Contáctanos
               </button>
-              <button className="p-2 text-gray-500 hover:text-[#00008F] transition-colors">
+              <button className="p-2 text-[#1A1D21] hover:text-[#00008F] transition-colors">
                 <Search size={18} />
               </button>
             </div>
@@ -177,10 +177,10 @@ export default function ConsultarApp() {
         ) : (
           <div className="mx-auto w-full" style={{ maxWidth: '420px' }}>
             <div className="text-center mb-8">
-              <h2 className="text-3xl font-bold mb-2 text-gray-800" style={{ fontFamily: "'Publico Headline Web', serif" }}>
+              <h2 className="text-3xl font-bold mb-2 text-[#1A1D21]" style={{ fontFamily: "'Publico Headline Web', serif" }}>
                 Consulta el estado de tu PQRS
               </h2>
-              <p className="text-gray-500 text-sm">
+              <p className="text-[#1A1D21] text-sm">
                 Ingresa los datos solicitados a continuación para conocer el estado y la respuesta de tu radicado.
               </p>
             </div>
@@ -197,8 +197,8 @@ export default function ConsultarApp() {
                   style={{ accentColor: BLUE }}
                 />
                 <div>
-                  <div className="text-sm font-semibold text-gray-700">¿Es una solicitud Anónima?</div>
-                  <div className="text-xs text-gray-400">Marca esta casilla si no ingresaste datos de identidad al radicar</div>
+                  <div className="text-sm font-semibold text-[#1A1D21]">¿Es una solicitud Anónima?</div>
+                  <div className="text-xs text-[#1A1D21]">Marca esta casilla si no ingresaste datos de identidad al radicar</div>
                 </div>
               </label>
 
@@ -206,12 +206,12 @@ export default function ConsultarApp() {
               {!form.anonima && (
                 <div className="space-y-4">
                   <div>
-                    <label className="block text-sm font-semibold text-gray-700 mb-1.5">Tipo de documento *</label>
+                    <label className="block text-sm font-semibold text-[#1A1D21] mb-1.5">Tipo de documento *</label>
                     <div className="relative">
                       <select
                         value={form.tipoDoc}
                         onChange={e => set('tipoDoc', e.target.value)}
-                        className="w-full appearance-none rounded-xl border px-4 py-3 text-sm text-gray-700 bg-white focus:outline-none transition-all pr-10"
+                        className="w-full appearance-none rounded-xl border px-4 py-3 text-sm text-[#1A1D21] bg-white focus:outline-none transition-all pr-10"
                         style={{ borderColor: '#E5E9F5' }}
                       >
                         <option value="">Seleccionar…</option>
@@ -222,13 +222,13 @@ export default function ConsultarApp() {
                   </div>
 
                   <div>
-                    <label className="block text-sm font-semibold text-gray-700 mb-1.5">Número de documento *</label>
+                    <label className="block text-sm font-semibold text-[#1A1D21] mb-1.5">Número de documento *</label>
                     <input
                       type="text"
                       placeholder="Ej. 12345678"
                       value={form.numDoc}
                       onChange={e => set('numDoc', e.target.value)}
-                      className="w-full rounded-xl border px-4 py-3 text-sm text-gray-700 focus:outline-none transition-all"
+                      className="w-full rounded-xl border px-4 py-3 text-sm text-[#1A1D21] focus:outline-none transition-all"
                       style={{ borderColor: '#E5E9F5' }}
                     />
                   </div>
@@ -237,13 +237,13 @@ export default function ConsultarApp() {
 
               {/* Número de Radicado */}
               <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-1.5">Número de Radicado *</label>
+                <label className="block text-sm font-semibold text-[#1A1D21] mb-1.5">Número de Radicado *</label>
                 <input
                   type="text"
                   placeholder="Ej. AXA-2026-123456"
                   value={form.radicado}
                   onChange={e => set('radicado', e.target.value)}
-                  className="w-full rounded-xl border px-4 py-3 text-sm text-gray-700 focus:outline-none transition-all font-mono uppercase"
+                  className="w-full rounded-xl border px-4 py-3 text-sm text-[#1A1D21] focus:outline-none transition-all font-mono uppercase"
                   style={{ borderColor: '#E5E9F5' }}
                 />
               </div>
@@ -276,7 +276,7 @@ export default function ConsultarApp() {
             {/* Legal Notice */}
             <div className="p-4 mt-6 rounded-xl flex items-start gap-3 border border-slate-200" style={{ background: '#F8FAFC' }}>
               <Shield size={18} className="text-slate-500 mt-0.5 shrink-0" />
-              <p className="text-xs leading-relaxed text-slate-700">
+              <p className="text-xs leading-relaxed text-[#1A1D21]">
                 <strong>Protección de datos:</strong> De conformidad con la Ley Habeas Data (Ley 1581 de 2012), AXA COLPATRIA garantiza la confidencialidad y seguridad de tus datos personales ingresados para la consulta de solicitudes.
               </p>
             </div>
@@ -329,8 +329,8 @@ function QueryResultView({
         {/* Ticket Header */}
         <div className="border-b border-gray-100 pb-5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
           <div>
-            <div className="text-xs text-gray-400 mb-1">Número de radicado</div>
-            <div className="text-2xl font-bold tracking-wider font-mono text-gray-800">{ticket.radicado}</div>
+            <div className="text-xs text-[#1A1D21] mb-1">Número de radicado</div>
+            <div className="text-2xl font-bold tracking-wider font-mono text-[#1A1D21]">{ticket.radicado}</div>
           </div>
           <div className="flex items-center gap-2">
             <span className={`px-4 py-1.5 rounded-full text-xs font-bold uppercase ${
@@ -345,7 +345,7 @@ function QueryResultView({
 
         {/* Stepper del Estado */}
         <div className="space-y-4">
-          <h4 className="text-sm font-bold text-gray-700">Estado de tu trámite</h4>
+          <h4 className="text-sm font-bold text-[#1A1D21]">Estado de tu trámite</h4>
           <div className="grid grid-cols-3 gap-2">
             {steps.map((s, i) => {
               const active = i <= currentIdx;
@@ -360,8 +360,8 @@ function QueryResultView({
                         : '#E5E9F5' 
                     }} 
                   />
-                  <div className={`text-xs font-bold ${active ? 'text-gray-800' : 'text-gray-400'}`}>{s.label}</div>
-                  <div className="text-[10px] text-gray-400 mt-0.5 hidden sm:block">{s.desc}</div>
+                  <div className={`text-xs font-bold ${active ? 'text-[#1A1D21]' : 'text-[#1A1D21]'}`}>{s.label}</div>
+                  <div className="text-[10px] text-[#1A1D21] mt-0.5 hidden sm:block">{s.desc}</div>
                 </div>
               );
             })}
@@ -370,33 +370,33 @@ function QueryResultView({
 
         {/* Detalles del Radicado */}
         <div className="bg-slate-50 rounded-xl p-5 border border-slate-100 space-y-4">
-          <h4 className="text-sm font-bold text-gray-700">Detalles de la solicitud</h4>
-          <div className="grid grid-cols-2 gap-4 text-xs text-gray-600">
+          <h4 className="text-sm font-bold text-[#1A1D21]">Detalles de la solicitud</h4>
+          <div className="grid grid-cols-2 gap-4 text-xs text-[#1A1D21]">
             <div>
-              <span className="block text-gray-400 mb-0.5">Tipo de PQRS</span>
-              <strong className="text-gray-700 text-sm">{ticket.tipo}</strong>
+              <span className="block text-[#1A1D21] mb-0.5">Tipo de PQRS</span>
+              <strong className="text-[#1A1D21] text-sm">{ticket.tipo}</strong>
             </div>
             <div>
-              <span className="block text-gray-400 mb-0.5">Producto o Servicio</span>
-              <strong className="text-gray-700 text-sm">{ticket.producto}</strong>
+              <span className="block text-[#1A1D21] mb-0.5">Producto o Servicio</span>
+              <strong className="text-[#1A1D21] text-sm">{ticket.producto}</strong>
             </div>
             <div>
-              <span className="block text-gray-400 mb-0.5">Fecha de Radicación</span>
-              <strong className="text-gray-700 text-sm flex items-center gap-1">
+              <span className="block text-[#1A1D21] mb-0.5">Fecha de Radicación</span>
+              <strong className="text-[#1A1D21] text-sm flex items-center gap-1">
                 <Calendar size={13} className="text-gray-400" /> {ticket.fecha}
               </strong>
             </div>
             <div>
-              <span className="block text-gray-400 mb-0.5">Plazo legal de respuesta</span>
-              <strong className="text-gray-700 text-sm flex items-center gap-1">
+              <span className="block text-[#1A1D21] mb-0.5">Plazo legal de respuesta</span>
+              <strong className="text-[#1A1D21] text-sm flex items-center gap-1">
                 <Clock size={13} className="text-gray-400" /> 15 días hábiles
               </strong>
             </div>
           </div>
 
           <div className="border-t border-slate-200 pt-3">
-            <span className="block text-xs text-gray-400 mb-1">Descripción reportada</span>
-            <p className="text-xs text-gray-600 leading-relaxed italic bg-white p-3 rounded-lg border border-slate-100">
+            <span className="block text-xs text-[#1A1D21] mb-1">Descripción reportada</span>
+            <p className="text-xs text-[#1A1D21] leading-relaxed italic bg-white p-3 rounded-lg border border-slate-100">
               "{ticket.descripcion}"
             </p>
           </div>
