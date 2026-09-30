@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router';
-import { Search, ChevronDown, X, User, Shield, Paperclip, CheckCircle, Phone, MapPin, AlertCircle, ClipboardList } from 'lucide-react';
+import { Search, ChevronDown, X, User, Shield, Paperclip, CheckCircle, Phone, MapPin, AlertCircle, ClipboardList, Clock, MonitorCheck, MonitorUp } from 'lucide-react';
 
 const BLUE = '#00008F';
 const BLUE_SEC = '#4976BA';
@@ -8,8 +8,7 @@ const INK = '#1A1D21';
 
 /* Escala tipográfica (Publico Headline Bold para títulos) */
 const HEADING = { fontFamily: "'Publico Headline Web', serif", fontWeight: 700, fontStyle: 'normal', lineHeight: 1.15 } as const;
-const H1 = { ...HEADING, color: INK, fontSize: 'clamp(36px, 5vw, 56px)' };
-const H1_ACCENT = { color: BLUE, fontSize: '1.15em' };
+const H1 = { ...HEADING, color: INK, fontSize: 'clamp(24px, 3vw, 38px)' };
 const H2 = { ...HEADING, color: INK, fontSize: 'clamp(28px, 3.5vw, 40px)' };
 const H3 = { ...HEADING, color: BLUE, fontSize: '24px', lineHeight: 1.25 };
 
@@ -174,26 +173,37 @@ export default function App() {
       </header>
 
       {/* ── Banner hero ── */}
-      <section
-        className="w-full border-b border-gray-200 bg-cover bg-center bg-[#f4f6fa]"
-        style={{ backgroundImage: "url('https://res.cloudinary.com/ddqbnr9vo/image/upload/v1790785394/IMG_2791_aabktd.jpg')" }}
-      >
-        <div
-          className="w-full"
-          style={{ background: 'linear-gradient(90deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.85) 45%, rgba(255,255,255,0) 75%)' }}
-        >
-          <div className="max-w-[1280px] mx-auto px-4 md:px-6 flex items-center" style={{ minHeight: '360px' }}>
-            <div className="max-w-xl py-12">
+      <div className="w-full bg-[#f4f6fa] border-b border-gray-200">
+        <section className="max-w-[1280px] mx-auto overflow-hidden">
+          <div
+            className="bg-cover"
+            style={{ backgroundImage: "url('https://res.cloudinary.com/ddqbnr9vo/image/upload/v1790785394/IMG_2791_aabktd.jpg')", backgroundPosition: 'right center' }}
+          >
+            <div
+              className="flex items-center px-6 md:px-20"
+              style={{ minHeight: 'clamp(160px, 18vw, 230px)', background: 'linear-gradient(90deg, rgba(244,246,250,0.95) 0%, rgba(244,246,250,0.8) 50%, rgba(244,246,250,0) 80%)' }}
+            >
               <h1 style={H1}>
-                Radica tu <span style={H1_ACCENT}>PQRS</span>
-              </h1>
-              <p className="mt-4" style={{ color: INK, fontSize: '22px', lineHeight: 1.4 }}>
+                Radica tu <span style={{ color: BLUE }}>PQRS.</span>
+                <br />
                 Tu opinión nos ayuda a mejorar.
-              </p>
+              </h1>
             </div>
           </div>
-        </div>
-      </section>
+          <ul className="flex flex-wrap items-center gap-y-3 px-6 md:px-20 py-4 text-white text-sm md:text-[15px]" style={{ background: '#4B4FB8', minHeight: '66px' }}>
+            {[
+              { icon: MonitorCheck, label: 'Trámite 100% digital' },
+              { icon: Clock, label: 'Respuesta oportuna' },
+              { icon: MonitorUp, label: 'Seguimiento en línea' },
+            ].map(({ icon: Icon, label }, i) => (
+              <li key={label} className={`w-full md:w-auto flex items-center gap-2.5 md:pr-5 md:mr-5 ${i < 2 ? 'md:border-r md:border-white/60' : ''}`}>
+                <Icon size={18} strokeWidth={1.75} />
+                {label}
+              </li>
+            ))}
+          </ul>
+        </section>
+      </div>
 
       {/* ── BODY ── */}
       <main className="flex-1 max-w-[1280px] mx-auto px-4 md:px-6 w-full py-10">
