@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router';
-import { Search, ChevronDown, X, User, Shield, Paperclip, CheckCircle, Phone, MapPin, AlertCircle, ClipboardList } from 'lucide-react';
+import { Search, ChevronDown, X, User, Shield, Paperclip, CheckCircle, Phone, MapPin, AlertCircle, ClipboardList, Info } from 'lucide-react';
 
 const BLUE = '#00008F';
 const BLUE_SEC = '#4976BA';
@@ -334,9 +334,9 @@ function SelectorView({ onSelect, onConsultar }: { onSelect: (anon: boolean) => 
       </div>
 
       {/* Info de reserva de identidad */}
-      <div className="p-4 mb-10 rounded-xl flex items-start gap-3 border border-slate-200" style={{ background: '#F8FAFC' }}>
-        <Shield size={18} className="text-slate-500 mt-0.5 shrink-0" />
-        <p className="text-xs leading-relaxed text-[#1A1D21]">
+      <div className="p-4 mb-10 rounded-xl flex items-start gap-3 border" style={{ background: '#D6E6FF', borderColor: '#6192DC' }}>
+        <Info size={18} className="mt-0.5 shrink-0" style={{ color: '#434956' }} />
+        <p className="text-xs leading-relaxed" style={{ color: '#434956' }}>
           <strong>Información sobre identidad reservada:</strong> Conforme al Artículo 38 Ley 190/1995, Art. 69 Ley 734/2002 y Art. 81 Ley 962/2005. Si deseas que tu solicitud sea tratada bajo la modalidad de identidad reservada, ten en cuenta que el trámite se debe adelantar directamente ante la <strong>Procuraduría General de la Nación</strong>.
         </p>
       </div>
@@ -346,7 +346,7 @@ function SelectorView({ onSelect, onConsultar }: { onSelect: (anon: boolean) => 
         <h2 className="text-center mb-2" style={H2}>
           Otros canales de atención
         </h2>
-        <p className="text-center text-[#1A1D21] mb-8" style={{ fontSize: '16px' }}>También puedes comunicarte con nosotros por estos medios.</p>
+        <p className="text-center text-[#1A1D21] mb-8" style={{ fontSize: '20px' }}>También puedes comunicarte con nosotros por estos medios.</p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
           {/* Línea integral */}
           <div className="flex flex-col items-center text-center p-8 rounded-2xl border border-gray-100" style={{ background: '#F8FAFF' }}>
