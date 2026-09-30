@@ -217,10 +217,10 @@ function SelectorView({ onSelect, onConsultar }: { onSelect: (anon: boolean) => 
         </p>
       </div>
 
-      <h2 className="font-bold mb-2" style={{ fontFamily: "'Publico Headline Web', serif", color: '#343c3d', fontSize: '48px' }}>
+      <h2 className="text-center mb-2" style={{ fontFamily: "'Publico Headline Web', serif", fontWeight: 700, fontStyle: 'normal', color: '#343c3d', fontSize: '48px', lineHeight: 1.2 }}>
         ¿Cómo deseas radicar tu solicitud?
       </h2>
-      <p className="text-gray-400 mb-8" style={{ fontSize: '20px' }}>Selecciona la modalidad que mejor se adapte a tu situación.</p>
+      <p className="text-center text-gray-400 mb-8" style={{ fontSize: '20px' }}>Selecciona la modalidad que mejor se adapte a tu situación.</p>
 
       <div className="grid md:grid-cols-3 gap-6 mb-6">
         {/* Identified */}
