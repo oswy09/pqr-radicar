@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router';
-import { Search, ChevronDown, X, User, Shield, Paperclip, CheckCircle, Phone, MapPin, AlertCircle, ClipboardList, Clock, MonitorCheck, MonitorUp } from 'lucide-react';
+import { Search, ChevronDown, X, User, Shield, Paperclip, CheckCircle, Phone, MapPin, AlertCircle, ClipboardList } from 'lucide-react';
 
 const BLUE = '#00008F';
 const BLUE_SEC = '#4976BA';
@@ -183,25 +183,23 @@ export default function App() {
               className="flex items-center px-6 md:px-20"
               style={{ minHeight: 'clamp(160px, 18vw, 230px)', background: 'linear-gradient(90deg, rgba(244,246,250,0.95) 0%, rgba(244,246,250,0.8) 50%, rgba(244,246,250,0) 80%)' }}
             >
-              <h1 style={H1}>
-                Radica tu <span style={{ color: BLUE }}>PQRS.</span>
-                <br />
-                Tu opinión nos ayuda a mejorar.
-              </h1>
+              <div className="py-8">
+                <h1 style={H1}>
+                  Radica tu <span style={{ color: BLUE }}>PQRS.</span>
+                  <br />
+                  Tu opinión nos ayuda a mejorar.
+                </h1>
+                <ul className="mt-5 flex flex-col md:flex-row md:flex-wrap gap-x-8 gap-y-2 text-[15px]" style={{ color: INK }}>
+                  {['Trámite 100% digital', 'Respuesta oportuna', 'Seguimiento en línea'].map(label => (
+                    <li key={label} className="flex items-center gap-2">
+                      <CheckCircle size={18} strokeWidth={2} style={{ color: BLUE }} className="shrink-0" />
+                      {label}
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </div>
-          <ul className="flex flex-wrap items-center gap-y-3 px-6 md:px-20 py-4 text-white text-sm md:text-[15px]" style={{ background: '#4B4FB8', minHeight: '66px' }}>
-            {[
-              { icon: MonitorCheck, label: 'Trámite 100% digital' },
-              { icon: Clock, label: 'Respuesta oportuna' },
-              { icon: MonitorUp, label: 'Seguimiento en línea' },
-            ].map(({ icon: Icon, label }, i) => (
-              <li key={label} className={`w-full md:w-auto flex items-center gap-2.5 md:pr-5 md:mr-5 ${i < 2 ? 'md:border-r md:border-white/60' : ''}`}>
-                <Icon size={18} strokeWidth={1.75} />
-                {label}
-              </li>
-            ))}
-          </ul>
         </section>
       </div>
 
