@@ -164,13 +164,15 @@ export default function ConsultarPage() {
 
             {/* No encontrado */}
             {resultado === 'not_found' && (
-              <div className="mt-6 p-4 rounded-xl flex items-start gap-3" style={{ background: '#FDD8E1', border: '1px solid #F4A0B0' }}>
-                <div className="w-8 h-8 rounded-full flex items-center justify-center shrink-0" style={{ background: '#880727', color: '#FFFFFF' }}>
-                  <XCircle size={16} />
+              <div className="mt-6 rounded-xl overflow-hidden" style={{ border: '1px solid #F4A0B0' }}>
+                <div className="flex items-center gap-3 px-5 py-4" style={{ background: '#FDD8E1' }}>
+                  <div className="w-8 h-8 rounded-full flex items-center justify-center shrink-0" style={{ background: '#880727', color: '#FFFFFF' }}>
+                    <X size={16} strokeWidth={2.5} />
+                  </div>
+                  <div className="font-bold text-sm" style={{ color: '#880727' }}>Radicado no encontrado</div>
                 </div>
-                <div className="pt-1">
-                  <div className="font-semibold text-sm mb-0.5" style={{ color: '#880727' }}>Radicado no encontrado</div>
-                  <p className="text-sm" style={{ color: '#880727' }}>No encontramos un radicado con ese número. Verifica e intenta de nuevo.</p>
+                <div className="bg-white px-5 py-4">
+                  <p className="text-sm text-gray-500 leading-relaxed">No encontramos un radicado con ese número. Verifica e intenta de nuevo.</p>
                 </div>
               </div>
             )}
